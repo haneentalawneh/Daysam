@@ -1,0 +1,1130 @@
+fileFormatVersion: 2
+guid: f912e40bbea0b492b98749baed45e6d7
+timeCreated: 1541359080
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Frame
+    100002: group_0
+    100004: group_1
+    100006: group_10
+    100008: group_11
+    100010: group_12
+    100012: group_13
+    100014: group_14
+    100016: group_15
+    100018: group_16
+    100020: group_17
+    100022: group_18
+    100024: group_19
+    100026: group_2
+    100028: group_20
+    100030: group_21
+    100032: group_22
+    100034: group_23
+    100036: group_3
+    100038: group_4
+    100040: group_5
+    100042: group_6
+    100044: Group_66
+    100046: Group_66 1
+    100048: Group_66 10
+    100050: Group_66 11
+    100052: Group_66 2
+    100054: Group_66 3
+    100056: Group_66 4
+    100058: Group_66 5
+    100060: Group_66 6
+    100062: Group_66 7
+    100064: Group_66 8
+    100066: Group_66 9
+    100068: group_7
+    100070: group_8
+    100072: group_9
+    100074: ID104
+    100076: ID110
+    100078: ID116
+    100080: ID12
+    100082: ID122
+    100084: ID128
+    100086: ID136
+    100088: ID142
+    100090: ID148
+    100092: ID18
+    100094: ID212
+    100096: ID230
+    100098: ID236
+    100100: ID24
+    100102: ID244
+    100104: ID250
+    100106: ID256
+    100108: ID262
+    100110: ID268
+    100112: ID274
+    100114: ID280
+    100116: ID286
+    100118: ID292
+    100120: ID298
+    100122: ID304
+    100124: ID310
+    100126: ID316
+    100128: ID32
+    100130: ID322
+    100132: ID326
+    100134: ID330
+    100136: ID334
+    100138: ID338
+    100140: ID342
+    100142: ID362
+    100144: ID368
+    100146: ID374
+    100148: ID38
+    100150: ID380
+    100152: ID386
+    100154: ID392
+    100156: ID398
+    100158: ID404
+    100160: ID417
+    100162: ID423
+    100164: ID429
+    100166: ID44
+    100168: ID441
+    100170: ID447
+    100172: ID453
+    100174: ID497
+    100176: ID501
+    100178: ID505
+    100180: ID52
+    100182: ID60
+    100184: ID66
+    100186: ID72
+    100188: ID78
+    100190: ID84
+    100192: ID92
+    100194: ID98
+    100196: instance_0
+    100198: instance_1
+    100200: instance_1 1
+    100202: instance_1 10
+    100204: instance_1 11
+    100206: instance_1 2
+    100208: instance_1 3
+    100210: instance_1 4
+    100212: instance_1 5
+    100214: instance_1 6
+    100216: instance_1 7
+    100218: instance_1 8
+    100220: instance_1 9
+    100222: instance_10
+    100224: instance_10 1
+    100226: instance_10 2
+    100228: instance_10 3
+    100230: instance_10 4
+    100232: instance_11
+    100234: instance_11 1
+    100236: instance_11 2
+    100238: instance_11 3
+    100240: instance_11 4
+    100242: instance_12
+    100244: instance_2
+    100246: instance_2 1
+    100248: instance_2 10
+    100250: instance_2 11
+    100252: instance_2 2
+    100254: instance_2 3
+    100256: instance_2 4
+    100258: instance_2 5
+    100260: instance_2 6
+    100262: instance_2 7
+    100264: instance_2 8
+    100266: instance_2 9
+    100268: instance_3
+    100270: instance_3 1
+    100272: instance_3 10
+    100274: instance_3 11
+    100276: instance_3 2
+    100278: instance_3 3
+    100280: instance_3 4
+    100282: instance_3 5
+    100284: instance_3 6
+    100286: instance_3 7
+    100288: instance_3 8
+    100290: instance_3 9
+    100292: instance_4
+    100294: instance_4 1
+    100296: instance_4 10
+    100298: instance_4 11
+    100300: instance_4 2
+    100302: instance_4 3
+    100304: instance_4 4
+    100306: instance_4 5
+    100308: instance_4 6
+    100310: instance_4 7
+    100312: instance_4 8
+    100314: instance_4 9
+    100316: instance_5
+    100318: instance_5 1
+    100320: instance_5 10
+    100322: instance_5 11
+    100324: instance_5 2
+    100326: instance_5 3
+    100328: instance_5 4
+    100330: instance_5 5
+    100332: instance_5 6
+    100334: instance_5 7
+    100336: instance_5 8
+    100338: instance_5 9
+    100340: instance_6
+    100342: instance_6 1
+    100344: instance_6 10
+    100346: instance_6 11
+    100348: instance_6 2
+    100350: instance_6 3
+    100352: instance_6 4
+    100354: instance_6 5
+    100356: instance_6 6
+    100358: instance_6 7
+    100360: instance_6 8
+    100362: instance_6 9
+    100364: instance_7
+    100366: instance_7 1
+    100368: instance_7 10
+    100370: instance_7 11
+    100372: instance_7 2
+    100374: instance_7 3
+    100376: instance_7 4
+    100378: instance_7 5
+    100380: instance_7 6
+    100382: instance_7 7
+    100384: instance_7 8
+    100386: instance_7 9
+    100388: instance_8
+    100390: instance_8 1
+    100392: instance_8 10
+    100394: instance_8 11
+    100396: instance_8 2
+    100398: instance_8 3
+    100400: instance_8 4
+    100402: instance_8 5
+    100404: instance_8 6
+    100406: instance_8 7
+    100408: instance_8 8
+    100410: instance_8 9
+    100412: instance_9
+    100414: //RootNode
+    100416: Sanyo_Wafer_1
+    100418: Sanyo_Wafer_1 1
+    100420: Sanyo_Wafer_1 10
+    100422: Sanyo_Wafer_1 11
+    100424: Sanyo_Wafer_1 12
+    100426: Sanyo_Wafer_1 13
+    100428: Sanyo_Wafer_1 14
+    100430: Sanyo_Wafer_1 15
+    100432: Sanyo_Wafer_1 16
+    100434: Sanyo_Wafer_1 17
+    100436: Sanyo_Wafer_1 18
+    100438: Sanyo_Wafer_1 19
+    100440: Sanyo_Wafer_1 2
+    100442: Sanyo_Wafer_1 20
+    100444: Sanyo_Wafer_1 21
+    100446: Sanyo_Wafer_1 22
+    100448: Sanyo_Wafer_1 23
+    100450: Sanyo_Wafer_1 24
+    100452: Sanyo_Wafer_1 25
+    100454: Sanyo_Wafer_1 26
+    100456: Sanyo_Wafer_1 27
+    100458: Sanyo_Wafer_1 28
+    100460: Sanyo_Wafer_1 29
+    100462: Sanyo_Wafer_1 3
+    100464: Sanyo_Wafer_1 30
+    100466: Sanyo_Wafer_1 31
+    100468: Sanyo_Wafer_1 32
+    100470: Sanyo_Wafer_1 33
+    100472: Sanyo_Wafer_1 34
+    100474: Sanyo_Wafer_1 35
+    100476: Sanyo_Wafer_1 36
+    100478: Sanyo_Wafer_1 37
+    100480: Sanyo_Wafer_1 38
+    100482: Sanyo_Wafer_1 39
+    100484: Sanyo_Wafer_1 4
+    100486: Sanyo_Wafer_1 40
+    100488: Sanyo_Wafer_1 41
+    100490: Sanyo_Wafer_1 42
+    100492: Sanyo_Wafer_1 43
+    100494: Sanyo_Wafer_1 44
+    100496: Sanyo_Wafer_1 45
+    100498: Sanyo_Wafer_1 46
+    100500: Sanyo_Wafer_1 47
+    100502: Sanyo_Wafer_1 48
+    100504: Sanyo_Wafer_1 49
+    100506: Sanyo_Wafer_1 5
+    100508: Sanyo_Wafer_1 50
+    100510: Sanyo_Wafer_1 51
+    100512: Sanyo_Wafer_1 52
+    100514: Sanyo_Wafer_1 53
+    100516: Sanyo_Wafer_1 54
+    100518: Sanyo_Wafer_1 55
+    100520: Sanyo_Wafer_1 56
+    100522: Sanyo_Wafer_1 57
+    100524: Sanyo_Wafer_1 58
+    100526: Sanyo_Wafer_1 59
+    100528: Sanyo_Wafer_1 6
+    100530: Sanyo_Wafer_1 60
+    100532: Sanyo_Wafer_1 61
+    100534: Sanyo_Wafer_1 62
+    100536: Sanyo_Wafer_1 63
+    100538: Sanyo_Wafer_1 64
+    100540: Sanyo_Wafer_1 65
+    100542: Sanyo_Wafer_1 66
+    100544: Sanyo_Wafer_1 67
+    100546: Sanyo_Wafer_1 68
+    100548: Sanyo_Wafer_1 69
+    100550: Sanyo_Wafer_1 7
+    100552: Sanyo_Wafer_1 70
+    100554: Sanyo_Wafer_1 71
+    100556: Sanyo_Wafer_1 72
+    100558: Sanyo_Wafer_1 73
+    100560: Sanyo_Wafer_1 74
+    100562: Sanyo_Wafer_1 75
+    100564: Sanyo_Wafer_1 76
+    100566: Sanyo_Wafer_1 77
+    100568: Sanyo_Wafer_1 78
+    100570: Sanyo_Wafer_1 79
+    100572: Sanyo_Wafer_1 8
+    100574: Sanyo_Wafer_1 80
+    100576: Sanyo_Wafer_1 81
+    100578: Sanyo_Wafer_1 82
+    100580: Sanyo_Wafer_1 83
+    100582: Sanyo_Wafer_1 84
+    100584: Sanyo_Wafer_1 85
+    100586: Sanyo_Wafer_1 86
+    100588: Sanyo_Wafer_1 87
+    100590: Sanyo_Wafer_1 88
+    100592: Sanyo_Wafer_1 89
+    100594: Sanyo_Wafer_1 9
+    100596: Sanyo_Wafer_1 90
+    100598: Sanyo_Wafer_1 91
+    100600: Sanyo_Wafer_1 92
+    100602: Sanyo_Wafer_1 93
+    100604: Sanyo_Wafer_1 94
+    100606: Sanyo_Wafer_1 95
+    100608: skp_camera_Last_Saved_SketchUp_View
+    100610: Wafers
+    400000: Frame
+    400002: group_0
+    400004: group_1
+    400006: group_10
+    400008: group_11
+    400010: group_12
+    400012: group_13
+    400014: group_14
+    400016: group_15
+    400018: group_16
+    400020: group_17
+    400022: group_18
+    400024: group_19
+    400026: group_2
+    400028: group_20
+    400030: group_21
+    400032: group_22
+    400034: group_23
+    400036: group_3
+    400038: group_4
+    400040: group_5
+    400042: group_6
+    400044: Group_66
+    400046: Group_66 1
+    400048: Group_66 10
+    400050: Group_66 11
+    400052: Group_66 2
+    400054: Group_66 3
+    400056: Group_66 4
+    400058: Group_66 5
+    400060: Group_66 6
+    400062: Group_66 7
+    400064: Group_66 8
+    400066: Group_66 9
+    400068: group_7
+    400070: group_8
+    400072: group_9
+    400074: ID104
+    400076: ID110
+    400078: ID116
+    400080: ID12
+    400082: ID122
+    400084: ID128
+    400086: ID136
+    400088: ID142
+    400090: ID148
+    400092: ID18
+    400094: ID212
+    400096: ID230
+    400098: ID236
+    400100: ID24
+    400102: ID244
+    400104: ID250
+    400106: ID256
+    400108: ID262
+    400110: ID268
+    400112: ID274
+    400114: ID280
+    400116: ID286
+    400118: ID292
+    400120: ID298
+    400122: ID304
+    400124: ID310
+    400126: ID316
+    400128: ID32
+    400130: ID322
+    400132: ID326
+    400134: ID330
+    400136: ID334
+    400138: ID338
+    400140: ID342
+    400142: ID362
+    400144: ID368
+    400146: ID374
+    400148: ID38
+    400150: ID380
+    400152: ID386
+    400154: ID392
+    400156: ID398
+    400158: ID404
+    400160: ID417
+    400162: ID423
+    400164: ID429
+    400166: ID44
+    400168: ID441
+    400170: ID447
+    400172: ID453
+    400174: ID497
+    400176: ID501
+    400178: ID505
+    400180: ID52
+    400182: ID60
+    400184: ID66
+    400186: ID72
+    400188: ID78
+    400190: ID84
+    400192: ID92
+    400194: ID98
+    400196: instance_0
+    400198: instance_1
+    400200: instance_1 1
+    400202: instance_1 10
+    400204: instance_1 11
+    400206: instance_1 2
+    400208: instance_1 3
+    400210: instance_1 4
+    400212: instance_1 5
+    400214: instance_1 6
+    400216: instance_1 7
+    400218: instance_1 8
+    400220: instance_1 9
+    400222: instance_10
+    400224: instance_10 1
+    400226: instance_10 2
+    400228: instance_10 3
+    400230: instance_10 4
+    400232: instance_11
+    400234: instance_11 1
+    400236: instance_11 2
+    400238: instance_11 3
+    400240: instance_11 4
+    400242: instance_12
+    400244: instance_2
+    400246: instance_2 1
+    400248: instance_2 10
+    400250: instance_2 11
+    400252: instance_2 2
+    400254: instance_2 3
+    400256: instance_2 4
+    400258: instance_2 5
+    400260: instance_2 6
+    400262: instance_2 7
+    400264: instance_2 8
+    400266: instance_2 9
+    400268: instance_3
+    400270: instance_3 1
+    400272: instance_3 10
+    400274: instance_3 11
+    400276: instance_3 2
+    400278: instance_3 3
+    400280: instance_3 4
+    400282: instance_3 5
+    400284: instance_3 6
+    400286: instance_3 7
+    400288: instance_3 8
+    400290: instance_3 9
+    400292: instance_4
+    400294: instance_4 1
+    400296: instance_4 10
+    400298: instance_4 11
+    400300: instance_4 2
+    400302: instance_4 3
+    400304: instance_4 4
+    400306: instance_4 5
+    400308: instance_4 6
+    400310: instance_4 7
+    400312: instance_4 8
+    400314: instance_4 9
+    400316: instance_5
+    400318: instance_5 1
+    400320: instance_5 10
+    400322: instance_5 11
+    400324: instance_5 2
+    400326: instance_5 3
+    400328: instance_5 4
+    400330: instance_5 5
+    400332: instance_5 6
+    400334: instance_5 7
+    400336: instance_5 8
+    400338: instance_5 9
+    400340: instance_6
+    400342: instance_6 1
+    400344: instance_6 10
+    400346: instance_6 11
+    400348: instance_6 2
+    400350: instance_6 3
+    400352: instance_6 4
+    400354: instance_6 5
+    400356: instance_6 6
+    400358: instance_6 7
+    400360: instance_6 8
+    400362: instance_6 9
+    400364: instance_7
+    400366: instance_7 1
+    400368: instance_7 10
+    400370: instance_7 11
+    400372: instance_7 2
+    400374: instance_7 3
+    400376: instance_7 4
+    400378: instance_7 5
+    400380: instance_7 6
+    400382: instance_7 7
+    400384: instance_7 8
+    400386: instance_7 9
+    400388: instance_8
+    400390: instance_8 1
+    400392: instance_8 10
+    400394: instance_8 11
+    400396: instance_8 2
+    400398: instance_8 3
+    400400: instance_8 4
+    400402: instance_8 5
+    400404: instance_8 6
+    400406: instance_8 7
+    400408: instance_8 8
+    400410: instance_8 9
+    400412: instance_9
+    400414: //RootNode
+    400416: Sanyo_Wafer_1
+    400418: Sanyo_Wafer_1 1
+    400420: Sanyo_Wafer_1 10
+    400422: Sanyo_Wafer_1 11
+    400424: Sanyo_Wafer_1 12
+    400426: Sanyo_Wafer_1 13
+    400428: Sanyo_Wafer_1 14
+    400430: Sanyo_Wafer_1 15
+    400432: Sanyo_Wafer_1 16
+    400434: Sanyo_Wafer_1 17
+    400436: Sanyo_Wafer_1 18
+    400438: Sanyo_Wafer_1 19
+    400440: Sanyo_Wafer_1 2
+    400442: Sanyo_Wafer_1 20
+    400444: Sanyo_Wafer_1 21
+    400446: Sanyo_Wafer_1 22
+    400448: Sanyo_Wafer_1 23
+    400450: Sanyo_Wafer_1 24
+    400452: Sanyo_Wafer_1 25
+    400454: Sanyo_Wafer_1 26
+    400456: Sanyo_Wafer_1 27
+    400458: Sanyo_Wafer_1 28
+    400460: Sanyo_Wafer_1 29
+    400462: Sanyo_Wafer_1 3
+    400464: Sanyo_Wafer_1 30
+    400466: Sanyo_Wafer_1 31
+    400468: Sanyo_Wafer_1 32
+    400470: Sanyo_Wafer_1 33
+    400472: Sanyo_Wafer_1 34
+    400474: Sanyo_Wafer_1 35
+    400476: Sanyo_Wafer_1 36
+    400478: Sanyo_Wafer_1 37
+    400480: Sanyo_Wafer_1 38
+    400482: Sanyo_Wafer_1 39
+    400484: Sanyo_Wafer_1 4
+    400486: Sanyo_Wafer_1 40
+    400488: Sanyo_Wafer_1 41
+    400490: Sanyo_Wafer_1 42
+    400492: Sanyo_Wafer_1 43
+    400494: Sanyo_Wafer_1 44
+    400496: Sanyo_Wafer_1 45
+    400498: Sanyo_Wafer_1 46
+    400500: Sanyo_Wafer_1 47
+    400502: Sanyo_Wafer_1 48
+    400504: Sanyo_Wafer_1 49
+    400506: Sanyo_Wafer_1 5
+    400508: Sanyo_Wafer_1 50
+    400510: Sanyo_Wafer_1 51
+    400512: Sanyo_Wafer_1 52
+    400514: Sanyo_Wafer_1 53
+    400516: Sanyo_Wafer_1 54
+    400518: Sanyo_Wafer_1 55
+    400520: Sanyo_Wafer_1 56
+    400522: Sanyo_Wafer_1 57
+    400524: Sanyo_Wafer_1 58
+    400526: Sanyo_Wafer_1 59
+    400528: Sanyo_Wafer_1 6
+    400530: Sanyo_Wafer_1 60
+    400532: Sanyo_Wafer_1 61
+    400534: Sanyo_Wafer_1 62
+    400536: Sanyo_Wafer_1 63
+    400538: Sanyo_Wafer_1 64
+    400540: Sanyo_Wafer_1 65
+    400542: Sanyo_Wafer_1 66
+    400544: Sanyo_Wafer_1 67
+    400546: Sanyo_Wafer_1 68
+    400548: Sanyo_Wafer_1 69
+    400550: Sanyo_Wafer_1 7
+    400552: Sanyo_Wafer_1 70
+    400554: Sanyo_Wafer_1 71
+    400556: Sanyo_Wafer_1 72
+    400558: Sanyo_Wafer_1 73
+    400560: Sanyo_Wafer_1 74
+    400562: Sanyo_Wafer_1 75
+    400564: Sanyo_Wafer_1 76
+    400566: Sanyo_Wafer_1 77
+    400568: Sanyo_Wafer_1 78
+    400570: Sanyo_Wafer_1 79
+    400572: Sanyo_Wafer_1 8
+    400574: Sanyo_Wafer_1 80
+    400576: Sanyo_Wafer_1 81
+    400578: Sanyo_Wafer_1 82
+    400580: Sanyo_Wafer_1 83
+    400582: Sanyo_Wafer_1 84
+    400584: Sanyo_Wafer_1 85
+    400586: Sanyo_Wafer_1 86
+    400588: Sanyo_Wafer_1 87
+    400590: Sanyo_Wafer_1 88
+    400592: Sanyo_Wafer_1 89
+    400594: Sanyo_Wafer_1 9
+    400596: Sanyo_Wafer_1 90
+    400598: Sanyo_Wafer_1 91
+    400600: Sanyo_Wafer_1 92
+    400602: Sanyo_Wafer_1 93
+    400604: Sanyo_Wafer_1 94
+    400606: Sanyo_Wafer_1 95
+    400608: skp_camera_Last_Saved_SketchUp_View
+    400610: Wafers
+    2000000: skp_camera_Last_Saved_SketchUp_View
+    2300000: Frame
+    2300002: group_0
+    2300004: group_1
+    2300006: group_14
+    2300008: group_15
+    2300010: group_16
+    2300012: group_17
+    2300014: group_18
+    2300016: group_19
+    2300018: group_21
+    2300020: group_22
+    2300022: group_23
+    2300024: ID104
+    2300026: ID110
+    2300028: ID116
+    2300030: ID12
+    2300032: ID122
+    2300034: ID128
+    2300036: ID136
+    2300038: ID142
+    2300040: ID18
+    2300042: ID212
+    2300044: ID230
+    2300046: ID236
+    2300048: ID24
+    2300050: ID244
+    2300052: ID250
+    2300054: ID256
+    2300056: ID262
+    2300058: ID268
+    2300060: ID274
+    2300062: ID280
+    2300064: ID286
+    2300066: ID292
+    2300068: ID298
+    2300070: ID304
+    2300072: ID310
+    2300074: ID32
+    2300076: ID362
+    2300078: ID368
+    2300080: ID374
+    2300082: ID38
+    2300084: ID380
+    2300086: ID386
+    2300088: ID392
+    2300090: ID398
+    2300092: ID404
+    2300094: ID417
+    2300096: ID423
+    2300098: ID429
+    2300100: ID44
+    2300102: ID441
+    2300104: ID447
+    2300106: ID52
+    2300108: ID60
+    2300110: ID66
+    2300112: ID72
+    2300114: ID78
+    2300116: ID84
+    2300118: ID92
+    2300120: ID98
+    2300122: Sanyo_Wafer_1
+    2300124: Sanyo_Wafer_1 1
+    2300126: Sanyo_Wafer_1 10
+    2300128: Sanyo_Wafer_1 11
+    2300130: Sanyo_Wafer_1 12
+    2300132: Sanyo_Wafer_1 13
+    2300134: Sanyo_Wafer_1 14
+    2300136: Sanyo_Wafer_1 15
+    2300138: Sanyo_Wafer_1 16
+    2300140: Sanyo_Wafer_1 17
+    2300142: Sanyo_Wafer_1 18
+    2300144: Sanyo_Wafer_1 19
+    2300146: Sanyo_Wafer_1 2
+    2300148: Sanyo_Wafer_1 20
+    2300150: Sanyo_Wafer_1 21
+    2300152: Sanyo_Wafer_1 22
+    2300154: Sanyo_Wafer_1 23
+    2300156: Sanyo_Wafer_1 24
+    2300158: Sanyo_Wafer_1 25
+    2300160: Sanyo_Wafer_1 26
+    2300162: Sanyo_Wafer_1 27
+    2300164: Sanyo_Wafer_1 28
+    2300166: Sanyo_Wafer_1 29
+    2300168: Sanyo_Wafer_1 3
+    2300170: Sanyo_Wafer_1 30
+    2300172: Sanyo_Wafer_1 31
+    2300174: Sanyo_Wafer_1 32
+    2300176: Sanyo_Wafer_1 33
+    2300178: Sanyo_Wafer_1 34
+    2300180: Sanyo_Wafer_1 35
+    2300182: Sanyo_Wafer_1 36
+    2300184: Sanyo_Wafer_1 37
+    2300186: Sanyo_Wafer_1 38
+    2300188: Sanyo_Wafer_1 39
+    2300190: Sanyo_Wafer_1 4
+    2300192: Sanyo_Wafer_1 40
+    2300194: Sanyo_Wafer_1 41
+    2300196: Sanyo_Wafer_1 42
+    2300198: Sanyo_Wafer_1 43
+    2300200: Sanyo_Wafer_1 44
+    2300202: Sanyo_Wafer_1 45
+    2300204: Sanyo_Wafer_1 46
+    2300206: Sanyo_Wafer_1 47
+    2300208: Sanyo_Wafer_1 48
+    2300210: Sanyo_Wafer_1 49
+    2300212: Sanyo_Wafer_1 5
+    2300214: Sanyo_Wafer_1 50
+    2300216: Sanyo_Wafer_1 51
+    2300218: Sanyo_Wafer_1 52
+    2300220: Sanyo_Wafer_1 53
+    2300222: Sanyo_Wafer_1 54
+    2300224: Sanyo_Wafer_1 55
+    2300226: Sanyo_Wafer_1 56
+    2300228: Sanyo_Wafer_1 57
+    2300230: Sanyo_Wafer_1 58
+    2300232: Sanyo_Wafer_1 59
+    2300234: Sanyo_Wafer_1 6
+    2300236: Sanyo_Wafer_1 60
+    2300238: Sanyo_Wafer_1 61
+    2300240: Sanyo_Wafer_1 62
+    2300242: Sanyo_Wafer_1 63
+    2300244: Sanyo_Wafer_1 64
+    2300246: Sanyo_Wafer_1 65
+    2300248: Sanyo_Wafer_1 66
+    2300250: Sanyo_Wafer_1 67
+    2300252: Sanyo_Wafer_1 68
+    2300254: Sanyo_Wafer_1 69
+    2300256: Sanyo_Wafer_1 7
+    2300258: Sanyo_Wafer_1 70
+    2300260: Sanyo_Wafer_1 71
+    2300262: Sanyo_Wafer_1 72
+    2300264: Sanyo_Wafer_1 73
+    2300266: Sanyo_Wafer_1 74
+    2300268: Sanyo_Wafer_1 75
+    2300270: Sanyo_Wafer_1 76
+    2300272: Sanyo_Wafer_1 77
+    2300274: Sanyo_Wafer_1 78
+    2300276: Sanyo_Wafer_1 79
+    2300278: Sanyo_Wafer_1 8
+    2300280: Sanyo_Wafer_1 80
+    2300282: Sanyo_Wafer_1 81
+    2300284: Sanyo_Wafer_1 82
+    2300286: Sanyo_Wafer_1 83
+    2300288: Sanyo_Wafer_1 84
+    2300290: Sanyo_Wafer_1 85
+    2300292: Sanyo_Wafer_1 86
+    2300294: Sanyo_Wafer_1 87
+    2300296: Sanyo_Wafer_1 88
+    2300298: Sanyo_Wafer_1 89
+    2300300: Sanyo_Wafer_1 9
+    2300302: Sanyo_Wafer_1 90
+    2300304: Sanyo_Wafer_1 91
+    2300306: Sanyo_Wafer_1 92
+    2300308: Sanyo_Wafer_1 93
+    2300310: Sanyo_Wafer_1 94
+    2300312: Sanyo_Wafer_1 95
+    3300000: Frame
+    3300002: group_0
+    3300004: group_1
+    3300006: group_14
+    3300008: group_15
+    3300010: group_16
+    3300012: group_17
+    3300014: group_18
+    3300016: group_19
+    3300018: group_21
+    3300020: group_22
+    3300022: group_23
+    3300024: ID104
+    3300026: ID110
+    3300028: ID116
+    3300030: ID12
+    3300032: ID122
+    3300034: ID128
+    3300036: ID136
+    3300038: ID142
+    3300040: ID18
+    3300042: ID212
+    3300044: ID230
+    3300046: ID236
+    3300048: ID24
+    3300050: ID244
+    3300052: ID250
+    3300054: ID256
+    3300056: ID262
+    3300058: ID268
+    3300060: ID274
+    3300062: ID280
+    3300064: ID286
+    3300066: ID292
+    3300068: ID298
+    3300070: ID304
+    3300072: ID310
+    3300074: ID32
+    3300076: ID362
+    3300078: ID368
+    3300080: ID374
+    3300082: ID38
+    3300084: ID380
+    3300086: ID386
+    3300088: ID392
+    3300090: ID398
+    3300092: ID404
+    3300094: ID417
+    3300096: ID423
+    3300098: ID429
+    3300100: ID44
+    3300102: ID441
+    3300104: ID447
+    3300106: ID52
+    3300108: ID60
+    3300110: ID66
+    3300112: ID72
+    3300114: ID78
+    3300116: ID84
+    3300118: ID92
+    3300120: ID98
+    3300122: Sanyo_Wafer_1
+    3300124: Sanyo_Wafer_1 1
+    3300126: Sanyo_Wafer_1 10
+    3300128: Sanyo_Wafer_1 11
+    3300130: Sanyo_Wafer_1 12
+    3300132: Sanyo_Wafer_1 13
+    3300134: Sanyo_Wafer_1 14
+    3300136: Sanyo_Wafer_1 15
+    3300138: Sanyo_Wafer_1 16
+    3300140: Sanyo_Wafer_1 17
+    3300142: Sanyo_Wafer_1 18
+    3300144: Sanyo_Wafer_1 19
+    3300146: Sanyo_Wafer_1 2
+    3300148: Sanyo_Wafer_1 20
+    3300150: Sanyo_Wafer_1 21
+    3300152: Sanyo_Wafer_1 22
+    3300154: Sanyo_Wafer_1 23
+    3300156: Sanyo_Wafer_1 24
+    3300158: Sanyo_Wafer_1 25
+    3300160: Sanyo_Wafer_1 26
+    3300162: Sanyo_Wafer_1 27
+    3300164: Sanyo_Wafer_1 28
+    3300166: Sanyo_Wafer_1 29
+    3300168: Sanyo_Wafer_1 3
+    3300170: Sanyo_Wafer_1 30
+    3300172: Sanyo_Wafer_1 31
+    3300174: Sanyo_Wafer_1 32
+    3300176: Sanyo_Wafer_1 33
+    3300178: Sanyo_Wafer_1 34
+    3300180: Sanyo_Wafer_1 35
+    3300182: Sanyo_Wafer_1 36
+    3300184: Sanyo_Wafer_1 37
+    3300186: Sanyo_Wafer_1 38
+    3300188: Sanyo_Wafer_1 39
+    3300190: Sanyo_Wafer_1 4
+    3300192: Sanyo_Wafer_1 40
+    3300194: Sanyo_Wafer_1 41
+    3300196: Sanyo_Wafer_1 42
+    3300198: Sanyo_Wafer_1 43
+    3300200: Sanyo_Wafer_1 44
+    3300202: Sanyo_Wafer_1 45
+    3300204: Sanyo_Wafer_1 46
+    3300206: Sanyo_Wafer_1 47
+    3300208: Sanyo_Wafer_1 48
+    3300210: Sanyo_Wafer_1 49
+    3300212: Sanyo_Wafer_1 5
+    3300214: Sanyo_Wafer_1 50
+    3300216: Sanyo_Wafer_1 51
+    3300218: Sanyo_Wafer_1 52
+    3300220: Sanyo_Wafer_1 53
+    3300222: Sanyo_Wafer_1 54
+    3300224: Sanyo_Wafer_1 55
+    3300226: Sanyo_Wafer_1 56
+    3300228: Sanyo_Wafer_1 57
+    3300230: Sanyo_Wafer_1 58
+    3300232: Sanyo_Wafer_1 59
+    3300234: Sanyo_Wafer_1 6
+    3300236: Sanyo_Wafer_1 60
+    3300238: Sanyo_Wafer_1 61
+    3300240: Sanyo_Wafer_1 62
+    3300242: Sanyo_Wafer_1 63
+    3300244: Sanyo_Wafer_1 64
+    3300246: Sanyo_Wafer_1 65
+    3300248: Sanyo_Wafer_1 66
+    3300250: Sanyo_Wafer_1 67
+    3300252: Sanyo_Wafer_1 68
+    3300254: Sanyo_Wafer_1 69
+    3300256: Sanyo_Wafer_1 7
+    3300258: Sanyo_Wafer_1 70
+    3300260: Sanyo_Wafer_1 71
+    3300262: Sanyo_Wafer_1 72
+    3300264: Sanyo_Wafer_1 73
+    3300266: Sanyo_Wafer_1 74
+    3300268: Sanyo_Wafer_1 75
+    3300270: Sanyo_Wafer_1 76
+    3300272: Sanyo_Wafer_1 77
+    3300274: Sanyo_Wafer_1 78
+    3300276: Sanyo_Wafer_1 79
+    3300278: Sanyo_Wafer_1 8
+    3300280: Sanyo_Wafer_1 80
+    3300282: Sanyo_Wafer_1 81
+    3300284: Sanyo_Wafer_1 82
+    3300286: Sanyo_Wafer_1 83
+    3300288: Sanyo_Wafer_1 84
+    3300290: Sanyo_Wafer_1 85
+    3300292: Sanyo_Wafer_1 86
+    3300294: Sanyo_Wafer_1 87
+    3300296: Sanyo_Wafer_1 88
+    3300298: Sanyo_Wafer_1 89
+    3300300: Sanyo_Wafer_1 9
+    3300302: Sanyo_Wafer_1 90
+    3300304: Sanyo_Wafer_1 91
+    3300306: Sanyo_Wafer_1 92
+    3300308: Sanyo_Wafer_1 93
+    3300310: Sanyo_Wafer_1 94
+    3300312: Sanyo_Wafer_1 95
+    4300000: group_0
+    4300002: ID12
+    4300004: ID18
+    4300006: ID24
+    4300008: ID32
+    4300010: ID38
+    4300012: ID44
+    4300014: ID52
+    4300016: ID60
+    4300018: ID66
+    4300020: ID72
+    4300022: ID78
+    4300024: ID84
+    4300026: ID92
+    4300028: ID98
+    4300030: ID104
+    4300032: ID110
+    4300034: ID116
+    4300036: ID122
+    4300038: ID128
+    4300040: ID136
+    4300042: ID142
+    4300044: group_1
+    4300046: ID230
+    4300048: ID236
+    4300050: ID244
+    4300052: ID250
+    4300054: ID256
+    4300056: ID262
+    4300058: ID268
+    4300060: ID274
+    4300062: ID280
+    4300064: ID286
+    4300066: ID292
+    4300068: ID298
+    4300070: ID304
+    4300072: ID310
+    4300074: Sanyo_Wafer_1
+    4300076: Frame
+    4300078: ID212
+    4300080: group_14
+    4300082: group_15
+    4300084: ID441
+    4300086: ID447
+    4300088: group_16
+    4300090: ID362
+    4300092: ID368
+    4300094: ID374
+    4300096: ID380
+    4300098: ID386
+    4300100: ID392
+    4300102: ID398
+    4300104: ID404
+    4300106: group_17
+    4300108: ID417
+    4300110: ID423
+    4300112: ID429
+    4300114: group_18
+    4300116: group_19
+    4300118: group_21
+    4300120: group_22
+    4300122: group_23
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_A05
+    second: {fileID: 2100000, guid: 8114828ffd55543158101369e9e7767e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_C07
+    second: {fileID: 2100000, guid: a41a4b7ecd7d341b0887993775036d7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_C08
+    second: {fileID: 2100000, guid: 102c8ba0e457d4eaa80d879c0c18e2ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_M00
+    second: {fileID: 2100000, guid: fb269e7d907224ff488e8c84286ccfbc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_M05
+    second: {fileID: 2100000, guid: 019835d58456349419fe675fa88df2f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_M06
+    second: {fileID: 2100000, guid: 4faa974a8e6624e6fbae0ca42617b670, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_M09
+    second: {fileID: 2100000, guid: c112c1e01e35a46f7a28b4279da96ac7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Seamed
+    second: {fileID: 2100000, guid: af240a9fd60d5440fb00e88a24f9fa6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: __Black_
+    second: {fileID: 2100000, guid: 7e06992a3f94e4137802a9fcfc8b3984, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material
+    second: {fileID: 2100000, guid: 6bdc53f2a17f94b649c3a8602eb13271, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_24
+    second: {fileID: 2100000, guid: 8b5cc0221a83a427e9072fd39b0d7ed7, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
