@@ -30,4 +30,9 @@ public class GameManager : MonoBehaviour
 
 		SceneManager.LoadScene ("Main");
 	}
+
+	public IEnumerator executeAfter(float period)
+	{
+		yield return new WaitForSeconds(period);
+	}
 }

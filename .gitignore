@@ -1,0 +1,7 @@
+
+*.csproj
+GP/Library
+GP/Temp
+*.sln
+GP/UnityPackageManager
+.DS_Store

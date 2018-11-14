@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
 	public GameObject rooms;
 	public GameObject house;
 	public static GameController sharedInstance = null;
+	GameObject currentlySelectedRoom;
 
 	void Start ()
 	{
@@ -17,7 +18,10 @@ public class GameController : MonoBehaviour
 	//Update is called every frame.
 	void Update ()
 	{
-
+		if (currentlySelectedRoom != null) {
+			
+			HandleIfClickedOutsideZoomedRoom ();
+		}
 	}
 
 	public void ShowRooms ()
@@ -26,30 +30,44 @@ public class GameController : MonoBehaviour
 		house.SetActive (false);
 	}
 
-	public void ZoomToRoom (GameObject room)
+	public void RoomIsZoomed (GameObject room)
 	{
-		Vector3 roomScale = room.transform.localScale;
 
-		room.transform.localPosition = Constants.ZOOMED_ROOM_POSITION;
-		room.transform.localScale = new Vector3 (roomScale.x * 3, roomScale.y, roomScale.z * 2);
+		ToggleRooms (room);
 
-		Light roomPointLight = ((room.transform.Find (Constants.LIGHT_NAME)).Find (Constants.POINT_LIGHT)).GetComponent<Light> ();
-
-		if (roomPointLight != null) {
-			Debug.Log ("here");
-			roomPointLight.intensity = Constants.ZOOMED_LIGHT_INTENSITY;
-			roomPointLight.range = Constants.ZOOMED_LIGHT_RANGE;
-		}
-
-		hideUnselectedRooms (room);
+		currentlySelectedRoom = room;
 	}
 
-	void hideUnselectedRooms (GameObject room)
+
+	void DeselectRoom ()
 	{
-		foreach (Transform child in rooms.transform) {
+		ToggleRooms (currentlySelectedRoom);
+		currentlySelectedRoom = null;
+	}
+
+	void ToggleRooms (GameObject selectedRoom)
+	{
+		
+		foreach (Transform roomTransform in rooms.transform) {
 			
-			if (child.gameObject != room) {
-				child.gameObject.SetActive (false);
+			GameObject room = roomTransform.transform.gameObject;
+
+			if (room != selectedRoom) {
+				room.SetActive (!room.activeSelf);
+			}
+		}
+	}
+
+	void HandleIfClickedOutsideZoomedRoom ()
+	{
+		
+
+		if (Input.GetMouseButtonDown (0)) {
+			
+			RoomController controller = currentlySelectedRoom.GetComponent<RoomController> ();
+			if (controller.IsRoomZoomedOut ()) {
+				controller.ZoomRoomOut ();
+				DeselectRoom ();
 			}
 		}
 	}
