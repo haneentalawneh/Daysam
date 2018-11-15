@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 	//Static instance of GameManager which allows it to be accessed by any other script.
 	public static GameManager sharedInstance = null;
 
+	public Enums.EnvironmentMood currentMood;
+
 	//Awake is always called before any Start functions
 	void Awake ()
 	{
@@ -28,11 +30,39 @@ public class GameManager : MonoBehaviour
 		//Sets this to not be destroyed when reloading scene
 		DontDestroyOnLoad (gameObject);
 
+		setGameMood ();
 		SceneManager.LoadScene ("Main");
 	}
 
-	public IEnumerator executeAfter(float period)
+
+	void setGameMood ()
 	{
-		yield return new WaitForSeconds(period);
+		int mood = Random.Range(0,3);
+
+		switch (mood) {
+
+		case 0:
+			currentMood = Enums.EnvironmentMood.Sunny;
+			Debug.Log("sunny");
+			break;
+
+		case 1:
+			currentMood = Enums.EnvironmentMood.Windy;
+			Debug.Log ("windy");
+			break;
+
+		case 2:
+			currentMood = Enums.EnvironmentMood.Rainy;
+			Debug.Log ("rainy");
+			break;
+			
+			
+		}
 	}
+
+	public IEnumerator executeAfter (float period)
+	{
+		yield return new WaitForSeconds (period);
+	}
+
 }
