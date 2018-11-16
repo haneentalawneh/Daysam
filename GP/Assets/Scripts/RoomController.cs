@@ -8,6 +8,7 @@ public class RoomController : MonoBehaviour
 	public GameObject roomLight;
 	public Vector3 roomOriginalPosition;
 	Bounds scaledRoomBounds;
+	public bool isZoomed = false;
 
 	void Start ()
 	{
@@ -38,10 +39,7 @@ public class RoomController : MonoBehaviour
 				RaycastHit hit;
 				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 
-				if (scaledRoomBounds.IntersectRay (ray) || scaledRoomBounds.Contains (Input.mousePosition)) {
-					
-					Debug.Log ("point is inside :");
-				}
+				HandleIfClickedOutsideZoomedRoom ();
 
 				if (Physics.Raycast (ray, out hit)) {
 					if (hit.transform) {
@@ -110,6 +108,17 @@ public class RoomController : MonoBehaviour
 
 			roomPointLight.intensity = zoomIn ? Constants.ZOOMED_LIGHT_INTENSITY : Constants.DEFAUILT_LIGHT_INTENSITY;
 			roomPointLight.range = zoomIn ? Constants.ZOOMED_LIGHT_RANGE : Constants.DEFAUILT_LIGHT_RANGE;
+		}
+		Debug.Log ("here" + isZoomed);
+		isZoomed = zoomIn;
+	}
+
+	void HandleIfClickedOutsideZoomedRoom ()
+	{
+
+		if (IsRoomZoomedOut () && isZoomed) {
+			ZoomRoomOut ();
+			GameController.sharedInstance.DeselectRoom ();
 		}
 	}
 }

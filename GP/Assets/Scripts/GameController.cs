@@ -18,10 +18,7 @@ public class GameController : MonoBehaviour
 	//Update is called every frame.
 	void Update ()
 	{
-		if (currentlySelectedRoom != null) {
-			
-			HandleIfClickedOutsideZoomedRoom ();
-		}
+
 	}
 
 	public void ShowRooms ()
@@ -39,7 +36,7 @@ public class GameController : MonoBehaviour
 	}
 
 
-	void DeselectRoom ()
+	public void DeselectRoom ()
 	{
 		ToggleRooms (currentlySelectedRoom);
 		currentlySelectedRoom = null;
@@ -54,20 +51,6 @@ public class GameController : MonoBehaviour
 
 			if (room != selectedRoom) {
 				room.SetActive (!room.activeSelf);
-			}
-		}
-	}
-
-	void HandleIfClickedOutsideZoomedRoom ()
-	{
-		
-
-		if (Input.GetMouseButtonDown (0)) {
-			
-			RoomController controller = currentlySelectedRoom.GetComponent<RoomController> ();
-			if (controller.IsRoomZoomedOut ()) {
-				controller.ZoomRoomOut ();
-				DeselectRoom ();
 			}
 		}
 	}
