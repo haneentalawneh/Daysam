@@ -5,3 +5,4 @@ GP/Temp
 *.sln
 GP/UnityPackageManager
 .DS_Store
+GP/obj

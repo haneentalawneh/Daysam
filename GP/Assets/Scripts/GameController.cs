@@ -11,7 +11,8 @@ public class GameController : MonoBehaviour
 
 	void Start ()
 	{
-		
+		Debug.Log (Screen.height);
+
 		sharedInstance = this; 
 	}
 
@@ -25,13 +26,14 @@ public class GameController : MonoBehaviour
 	{
 		rooms.SetActive (true);
 		house.SetActive (false);
+
+		InitRoomsLightState ();
 	}
 
 	public void RoomIsZoomed (GameObject room)
 	{
 
 		ToggleRooms (room);
-
 		currentlySelectedRoom = room;
 	}
 
@@ -51,6 +53,28 @@ public class GameController : MonoBehaviour
 
 			if (room != selectedRoom) {
 				room.SetActive (!room.activeSelf);
+			}
+		}
+	}
+
+	void InitRoomsLightState ()
+	{
+		
+		int count = GameManager.sharedInstance.litRoomsNumber;
+
+		foreach (Transform roomTransform in rooms.transform) {
+			
+			GameObject room = roomTransform.transform.gameObject;
+
+			RoomController controller = room.GetComponent<RoomController> ();
+
+			if (count > 0) {
+				
+				controller.generateRoomLightState (true);
+				count--;
+			} else {
+				
+				controller.generateRoomLightState (false);
 			}
 		}
 	}

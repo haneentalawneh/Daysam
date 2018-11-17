@@ -29,4 +29,6 @@ public class Constants : MonoBehaviour
 
 	public static Quaternion NIGHT_LIGHT_ROTATION = Quaternion.Euler (0.0f, 120.0f, 0.0f);
 
+	public  const float SMOKE_LIFETIME_VALUE = 2.5f;
+
 }
