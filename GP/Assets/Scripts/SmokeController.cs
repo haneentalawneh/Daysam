@@ -33,9 +33,5 @@ public class SmokeController : MonoBehaviour
 		size += addedSize;
 
 		psmain.startLifetime = size;
-
-		Debug.Log ("lifeTime");
-		Debug.Log (psmain.startLifetime.constant);
-		Debug.Log (GameManager.sharedInstance.litRoomsNumber);
 	}
 }

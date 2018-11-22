@@ -21,10 +21,6 @@ public class Constants : MonoBehaviour
 
 	public const float ZOOMED_LIGHT_RANGE = 800.0F;
 
-	public static Vector3 ZOOMED_ROOM_MIN = new Vector3 (261.0f, 163.0f, 0.0f);
-
-	public static Vector3 ZOOMED_ROOM_MAX = new Vector3 (615.0f, 408.0f, 0.0f);
-
 	public static Quaternion DAY_LIGHT_ROTATION = Quaternion.Euler (7.0f, 180.0f, 0.0f);
 
 	public static Quaternion NIGHT_LIGHT_ROTATION = Quaternion.Euler (0.0f, 120.0f, 0.0f);

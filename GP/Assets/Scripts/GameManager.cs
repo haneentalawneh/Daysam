@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
 	void SetGameMood ()
 	{
-		int mood = Random.Range (0, 3);
+		int mood = Random.Range (0, 2999)%3;
 
 		switch (mood) {
 
