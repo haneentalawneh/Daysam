@@ -27,4 +27,9 @@ public class Constants : MonoBehaviour
 
 	public  const float SMOKE_LIFETIME_VALUE = 2.5f;
 
+	public const float DEFAULT_RIVER_SPEED = 0.25F;
+
+	public const float FAST_RIVER_SPEED = 1.35F;
+
+
 }

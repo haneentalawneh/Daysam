@@ -1,13 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SunAnimationControoler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnvironmentController.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameController.cs" Line="14" Column="1" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/RoomController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Constants.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="51" Column="2" />
-      <File FileName="Assets/Scripts/EnvironmentController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnvironmentController.cs" Line="21" Column="1" />
       <File FileName="Assets/Scripts/SunAnimationControoler.cs" Line="31" Column="75" />
+      <File FileName="Assets/Scripts/SmokeController.cs" Line="17" Column="1" />
+      <File FileName="Assets/Standard Assets/Environment/Water/Water/Scripts/Water.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
