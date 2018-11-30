@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enums : MonoBehaviour {
 	
-	public enum EnvironmentMood
+	public enum EnvironmentMood:int
 	{
 		Sunny = 0,
 		Windy = 1,

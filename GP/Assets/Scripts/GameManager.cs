@@ -62,7 +62,6 @@ public class GameManager : MonoBehaviour
 			Debug.Log ("rainy");
 			break;
 			
-			
 		}
 	}
 

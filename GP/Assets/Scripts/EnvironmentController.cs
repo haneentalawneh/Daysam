@@ -6,35 +6,23 @@ public class EnvironmentController : MonoBehaviour
 {
 	
 	public GameObject[] options;
+	public AudioClip[] sounds;
 	public GameObject MainLight;
+	AudioSource src;
 
 	// Use this for initialization
 	void Start ()
 	{
-		
+		src = gameObject.GetComponent<AudioSource> ();
 		SetUpGameEnvironment ();
-		
 	}
 
 	void SetUpGameEnvironment ()
 	{
-		switch (GameManager.sharedInstance.currentMood) {
-
-		case Enums.EnvironmentMood.Sunny:
-			options [0].SetActive (true);
-			MainLight.transform.localRotation = Constants.DAY_LIGHT_ROTATION;
-			break;
-
-		case Enums.EnvironmentMood.Windy:
-			options [1].SetActive (true);
-			MainLight.transform.localRotation = Constants.NIGHT_LIGHT_ROTATION;
-			break;
-
-		case Enums.EnvironmentMood.Rainy:
-			options [2].SetActive (true);
-			MainLight.transform.localRotation = Constants.NIGHT_LIGHT_ROTATION;
-			break;
-
-		}
+		int mood = (int)GameManager.sharedInstance.currentMood;
+		options [mood].SetActive (true);
+		src.clip = sounds [mood];
+		src.Play ();
+		MainLight.transform.localRotation = (mood == 0) ? Constants.DAY_LIGHT_ROTATION : Constants.NIGHT_LIGHT_ROTATION;
 	}
 }

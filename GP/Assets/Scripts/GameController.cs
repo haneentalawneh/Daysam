@@ -11,7 +11,6 @@ public class GameController : MonoBehaviour
 
 	void Start ()
 	{
-		Debug.Log (Screen.height);
 
 		sharedInstance = this; 
 	}
