@@ -80,6 +80,11 @@ public class RoomController : MonoBehaviour
 				pointLightGameObject.SetActive (!pointLightGameObject.activeSelf);
 
 				SmokeController.sharedInstance.ChangeSmokeSize (pointLightGameObject.activeSelf ? (Constants.SMOKE_LIFETIME_VALUE) : (-1 * Constants.SMOKE_LIFETIME_VALUE));
+
+				// if the user turned off the light show the coins 
+				if (!pointLightGameObject.activeSelf) {
+					CoinsController.sharedInstance.showCoins (roomLight.transform.position);
+				}
 			}
 		}
 	}

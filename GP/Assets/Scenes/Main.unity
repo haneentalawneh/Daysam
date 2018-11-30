@@ -4406,6 +4406,47 @@ Transform:
   m_Father: {fileID: 362487303}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &121976207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 121976209}
+  - component: {fileID: 121976208}
+  m_Layer: 0
+  m_Name: coins
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &121976208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 121976207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae91de93e81346f1bdca48f8fd977eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coins: {fileID: 1870997946483180, guid: abc9b325b169847ecbf53fcaad3391dc, type: 2}
+--- !u!4 &121976209
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 121976207}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2240.3965, y: 679.34674, z: 37.684387}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &124835935
 GameObject:
   m_ObjectHideFlags: 0
@@ -20892,6 +20933,7 @@ GameObject:
   - component: {fileID: 1541592383}
   - component: {fileID: 1541592382}
   - component: {fileID: 1541592384}
+  - component: {fileID: 1541592385}
   m_Layer: 0
   m_Name: MainCameera
   m_TagString: MainCamera
@@ -20961,6 +21003,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rooms: {fileID: 741648323}
   house: {fileID: 1795974094}
+--- !u!81 &1541592385
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1541592381}
+  m_Enabled: 1
 --- !u!1 &1545572309
 GameObject:
   m_ObjectHideFlags: 0
