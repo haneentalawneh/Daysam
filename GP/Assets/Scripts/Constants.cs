@@ -31,5 +31,5 @@ public class Constants : MonoBehaviour
 
 	public const float FAST_RIVER_SPEED = 1.35F;
 
-
+	public const int MAX_ROOMS_NUMBER = 6;
 }
