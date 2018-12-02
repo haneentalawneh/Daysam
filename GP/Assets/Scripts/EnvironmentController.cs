@@ -9,12 +9,14 @@ public class EnvironmentController : MonoBehaviour
 	public AudioClip[] sounds;
 	public GameObject MainLight;
 	AudioSource src;
+	public WindZone wind;
 
 	// Use this for initialization
 	void Start ()
 	{
 		src = gameObject.GetComponent<AudioSource> ();
 		SetUpGameEnvironment ();
+
 	}
 
 	void SetUpGameEnvironment ()
@@ -24,5 +26,6 @@ public class EnvironmentController : MonoBehaviour
 		src.clip = sounds [mood];
 		src.Play ();
 		MainLight.transform.localRotation = (mood == 0) ? Constants.DAY_LIGHT_ROTATION : Constants.NIGHT_LIGHT_ROTATION;
+		wind.gameObject.SetActive (mood == 1);
 	}
 }
