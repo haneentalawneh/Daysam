@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SunAnimationControoler : MonoBehaviour {
+public class Fancontoller : MonoBehaviour
+{
 
     private float RotateSpeed = 50f;
     private float Radius = 10f;
 
     private Vector3 centre;
-    public GameObject sun;
+    public GameObject Fan;
 
     void Start()
     {
-        centre = sun.GetComponent<Renderer>().bounds.center;
+        centre = Fan.GetComponent<Renderer>().bounds.center;
     }
 
     void Update()
-    {        
+    {
         gameObject.transform.RotateAround(centre, gameObject.transform.up, RotateSpeed * Time.deltaTime);
         
     }
 }
-
