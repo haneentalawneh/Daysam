@@ -775,7 +775,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 409489825
+  randomSeed: -908698262
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -17365,7 +17365,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1531404201
 Transform:
   m_ObjectHideFlags: 0
@@ -25166,7 +25166,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2133315723}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -594, y: -65, z: -192}
+  m_LocalPosition: {x: -594, y: -455, z: -192}
   m_LocalScale: {x: 3.57143, y: 4.424785, z: 6.666676}
   m_Children: []
   m_Father: {fileID: 1997921925}
@@ -25233,7 +25233,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2133315723}
   serializedVersion: 5
-  lengthInSec: 5
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   looping: 1
@@ -25286,15 +25286,15 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1863861471
+  randomSeed: 129276309
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 3
-      minScalar: 2.5
+      scalar: 0.05
+      minScalar: 6
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -25334,8 +25334,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 20
-      minScalar: 15
+      scalar: 15
+      minScalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -25737,7 +25737,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 113.33458, y: 98.87308, z: 100}
+    m_Scale: {x: 125.02176, y: 105.90996, z: 273.00232}
     placementMode: 0
     m_Mesh: {fileID: 0}
     m_MeshRenderer: {fileID: 0}
