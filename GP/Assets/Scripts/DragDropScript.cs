@@ -24,9 +24,12 @@ public class DragDropScript : MonoBehaviour
     //
     bool grassCollisionFlag = false;
     bool riverCollisionFlag = false;
+    //
+    Vector3 startPosition;
     // Use this for initialization
     void Start()
     {
+        startPosition = gameObject.transform.position;
        /* River = GameObject.FindWithTag("River");
         if (River != null)
         {
@@ -58,7 +61,8 @@ public class DragDropScript : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             isMouseDragging = false;
-            checkIfSutiableAreaForRotation();            
+            checkIfSutiableAreaForRotation();
+            Debug.Log(gameObject.transform.position.y + ":YPosition");
         }
         
         //Is mouse Moving
@@ -72,6 +76,11 @@ public class DragDropScript : MonoBehaviour
             Vector3 currentPosition = Camera.main.ScreenToWorldPoint(currentScreenSpace) + offsetValue;
 
             //It will update target gameobject's current postion.
+            //Debug.Log(currentPosition.y+":YPosition");
+            if (currentPosition.y < level && gameObject.tag != "RiverWheel")
+            {
+                currentPosition.y = level;
+            }
             getTarget.transform.position = currentPosition;
         }
         
@@ -92,8 +101,8 @@ public class DragDropScript : MonoBehaviour
             mouseX = screenX;
         else
             mouseX = Input.mousePosition.x;
-        if (mouseY < Screen.height * grassLevelRatio)
-            mouseY = Screen.height * grassLevelRatio;
+        if (mouseY < Screen.height * riverLevelRatio)
+            mouseY = Screen.height * riverLevelRatio;
         else if (Input.mousePosition.y > screenY)
             mouseY = screenY;
         else
@@ -113,17 +122,26 @@ public class DragDropScript : MonoBehaviour
             Constants.RiverWheelRotationStatus = false;
         }
     }
-
+    
     void checkIfSutiableAreaForRotation()
     {
-        if(gameObject.tag == "Fan" && !riverCollisionFlag && grassCollisionFlag)
+        if(checkEnvironment())
         {
-            Constants.FanRotationStatus = true;
+            if (gameObject.tag == "Fan" && !riverCollisionFlag && grassCollisionFlag)
+            {
+                Constants.FanRotationStatus = true;
+            }
+            else if (gameObject.tag == "RiverWheel" && riverCollisionFlag && grassCollisionFlag)
+            {
+                Constants.RiverWheelRotationStatus = true;
+            }
         }
-        else if (gameObject.tag == "RiverWheel" && riverCollisionFlag && grassCollisionFlag)
+        else
         {
-            Constants.RiverWheelRotationStatus = true;
+            gameObject.transform.position = startPosition;
         }
+        
+
     }
 
     //Method to Return Clicked Object
@@ -143,20 +161,21 @@ public class DragDropScript : MonoBehaviour
         return target;
     }
 
-    bool checkEnvironment(string tag)
+    bool checkEnvironment()
     {
+        string tag = gameObject.tag;
         switch (GameManager.sharedInstance.currentMood)
         {
 
-            case Enums.EnvironmentMood.Sunny:
-                if (tag != "Fan")
+            case Enums.EnvironmentMood.Windy:
+                if (tag == "Fan")
                     return true;
                 else
                     return false;
                 break;
 
-            case Enums.EnvironmentMood.Windy:
-                if (tag != "SunCell")
+            case Enums.EnvironmentMood.Sunny:
+                if (tag == "SunCell")
                     return true;
                 else
                     return false;
@@ -186,7 +205,8 @@ public class DragDropScript : MonoBehaviour
                 //centre = centerObject.GetComponent<Renderer>().bounds.center;
                 //Debug.Log(Input.mousePosition.y);
                 Debug.Log(col.transform.position.y);
-                level = Camera.main.WorldToScreenPoint(new Vector3(0, col.transform.position.y,0)).y;
+                Debug.Log(gameObject.transform.position.y);
+                level = gameObject.transform.position.y-3;//Camera.main.WorldToScreenPoint(new Vector3(0, col.transform.position.y,0)).y;
                 Debug.Log(level);
                 grassCollisionFlag = true;
                 Debug.Log("Enter Grass");
