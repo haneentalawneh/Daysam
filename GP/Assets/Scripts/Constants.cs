@@ -27,4 +27,8 @@ public class Constants : MonoBehaviour
 
 	public  const float SMOKE_LIFETIME_VALUE = 2.5f;
 
+    public static bool RiverWheelRotationStatus = false;
+
+    public static bool FanRotationStatus = false;
+
 }

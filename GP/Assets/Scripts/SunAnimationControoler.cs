@@ -5,8 +5,6 @@ using UnityEngine;
 public class SunAnimationControoler : MonoBehaviour {
 
     private float RotateSpeed = 50f;
-    private float Radius = 10f;
-
     private Vector3 centre;
     public GameObject sun;
 
