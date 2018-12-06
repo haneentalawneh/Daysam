@@ -27,9 +27,9 @@ public class Constants : MonoBehaviour
 
 	public  const float SMOKE_LIFETIME_VALUE = 2.5f;
 
-	public const float DEFAULT_RIVER_SPEED = 0.25F;
+	public static Vector4 FAST_RIVER_SPEED = new Vector4(-8,7,6,8);
 
-	public const float FAST_RIVER_SPEED = 1.35F;
+	public static Vector4 DEFAULT_RIVER_SPEED = new Vector4(-2,2,1,3);
 
 	public const int MAX_ROOMS_NUMBER = 6;
 }

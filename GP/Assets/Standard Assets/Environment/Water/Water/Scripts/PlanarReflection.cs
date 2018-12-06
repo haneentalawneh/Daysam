@@ -12,7 +12,7 @@ namespace UnityStandardAssets.Water
         public bool reflectSkybox = false;
         public Color clearColor = Color.grey;
         public String reflectionSampler = "_ReflectionTex";
-        public float clipPlaneOffset = 0.07F;
+        public float clipPlaneOffset = 10.0f;
 
 
         Vector3 m_Oldpos;
