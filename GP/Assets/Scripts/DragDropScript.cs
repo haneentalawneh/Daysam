@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DragDropScript : MonoBehaviour
 {
 
     //Initialize Variables
     GameObject getTarget;
+    public Image Icon;
     bool isMouseDragging;
     Vector3 offsetValue;
     Vector3 positionOfScreen;
@@ -137,8 +139,11 @@ public class DragDropScript : MonoBehaviour
             }
         }
         else
-        {
+        {            
+            this.gameObject.SetActive(false);
+            this.Icon.enabled = true;
             gameObject.transform.position = startPosition;
+
         }
         
 
