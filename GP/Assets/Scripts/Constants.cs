@@ -32,4 +32,8 @@ public class Constants : MonoBehaviour
 	public static Vector4 DEFAULT_RIVER_SPEED = new Vector4(-2,2,1,3);
 
 	public const int MAX_ROOMS_NUMBER = 6;
+
+    public static bool RiverWheelRotationStatus = false;
+
+    public static bool FanRotationStatus = false;
 }
