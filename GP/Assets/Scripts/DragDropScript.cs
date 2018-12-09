@@ -129,6 +129,8 @@ public class DragDropScript : MonoBehaviour
     {
         if(checkEnvironment())
         {
+			SmokeController.sharedInstance.StopSmoke ();
+
             if (gameObject.tag == "Fan" && !riverCollisionFlag && grassCollisionFlag)
             {
                 Constants.FanRotationStatus = true;

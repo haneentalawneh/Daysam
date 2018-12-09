@@ -34,4 +34,11 @@ public class SmokeController : MonoBehaviour
 
 		psmain.startLifetime = size;
 	}
+
+	public void StopSmoke ()
+	{
+		
+		ParticleSystem.MainModule psmain = smoke.main;
+		psmain.startLifetime = 0.0f;
+	}
 }
