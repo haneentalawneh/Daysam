@@ -33,6 +33,10 @@ public class Constants : MonoBehaviour
 
 	public const int MAX_ROOMS_NUMBER = 6;
 
+    public const int Tool_Price = 6;
+
+    public const int TurnOff_Light_Price = 1;
+
     public static bool RiverWheelRotationStatus = false;
 
     public static bool FanRotationStatus = false;

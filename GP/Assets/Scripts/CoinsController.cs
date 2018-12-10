@@ -15,7 +15,7 @@ public class CoinsController : MonoBehaviour
 	void Start ()
 	{
 		sharedInstance = this;
-		coinsCount = Constants.MAX_ROOMS_NUMBER - GameManager.sharedInstance.litRoomsNumber;
+		coinsCount = Constants.Tool_Price - GameManager.sharedInstance.litRoomsNumber;
 		coinsCounterLabel.text = coinsCount.ToString ();
 	}
 
@@ -24,9 +24,14 @@ public class CoinsController : MonoBehaviour
 		coins = Object.Instantiate (coins, position, Quaternion.identity);
 	}
 
-	public void ChangeCountText (bool addCoins)
+	public void ChangeCountText (bool addCoins, int value)
 	{
-		coinsCount += addCoins ? 1 : -1;
+		coinsCount += addCoins ? value : -value;
 		coinsCounterLabel.text = coinsCount.ToString ();
 	}
+
+    public int getCoinsCount()
+    {
+        return coinsCount;
+    }
 }
