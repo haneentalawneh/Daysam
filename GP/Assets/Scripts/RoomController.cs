@@ -86,7 +86,7 @@ public class RoomController : MonoBehaviour
 					CoinsController.sharedInstance.showCoins (roomLight.transform.position);
 				}
 
-				CoinsController.sharedInstance.ChangeCountText (!pointLightGameObject.activeSelf);
+                CoinsController.sharedInstance.ChangeCountText(!pointLightGameObject.activeSelf, Constants.TurnOff_Light_Price);
 			}
 		}
 	}

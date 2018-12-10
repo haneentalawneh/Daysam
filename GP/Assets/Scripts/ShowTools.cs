@@ -13,11 +13,22 @@ public class ShowTools : MonoBehaviour {
 	}
 	public void showTool()
     {
-        Icon.enabled = false;
-        toolObject.SetActive(true);        
+        BuyToolIFYouCan();
     }
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    void BuyToolIFYouCan()
+    {
+        if(CoinsController.sharedInstance.getCoinsCount()>=Constants.Tool_Price)
+        {
+            Icon.enabled = false;
+            toolObject.SetActive(true);
+            CoinsController.sharedInstance.ChangeCountText(false, Constants.Tool_Price);
+        }
+        
+           
+    }
 }
