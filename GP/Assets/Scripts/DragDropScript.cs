@@ -42,51 +42,47 @@ public class DragDropScript : MonoBehaviour
     }
 
     void Update()
-    {
+	{
+		if (!GameController.sharedInstance.gameIsStopped) {
+			//Mouse Button Press Down
+			if (Input.GetMouseButtonDown (0)) {            
+				RaycastHit hitInfo;
+				getTarget = ReturnClickedObject (out hitInfo);
+				if (getTarget != null) {//if this object is toolObject
+					StopToolRotation ();//change toolRotationStatus
+					isMouseDragging = true;
+					//Converting world position to screen position.
+					positionOfScreen = Camera.main.WorldToScreenPoint (getTarget.transform.position);
+					offsetValue = getTarget.transform.position - Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, positionOfScreen.z));
+				}
+			}
 
-        //Mouse Button Press Down
-        if (Input.GetMouseButtonDown(0))
-        {            
-            RaycastHit hitInfo;
-            getTarget = ReturnClickedObject(out hitInfo);
-            if (getTarget != null)
-            {//if this object is toolObject
-                StopToolRotation();//change toolRotationStatus
-                isMouseDragging = true;
-                //Converting world position to screen position.
-                positionOfScreen = Camera.main.WorldToScreenPoint(getTarget.transform.position);
-                offsetValue = getTarget.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, positionOfScreen.z));
-            }
-        }
-
-        //Mouse Button Up
-        if (Input.GetMouseButtonUp(0))
-        {
-            isMouseDragging = false;
-            checkIfSutiableAreaForRotation();
-            Debug.Log(gameObject.transform.position.y + ":YPosition");
-        }
+			//Mouse Button Up
+			if (Input.GetMouseButtonUp (0)) {
+				isMouseDragging = false;
+				checkIfSutiableAreaForRotation ();
+				Debug.Log (gameObject.transform.position.y + ":YPosition");
+			}
         
-        //Is mouse Moving
-        if (isMouseDragging)
-        {                        
-            //tracking mouse position.
-            Vector3 currentScreenSpace = getCorrectMousePosition();
-            // Debug.Log(mouseX+":x");
-            // Debug.Log(mouseY + "Y");
-            //converting screen position to world position with offset changes.
-            Vector3 currentPosition = Camera.main.ScreenToWorldPoint(currentScreenSpace) + offsetValue;
+			//Is mouse Moving
+			if (isMouseDragging) {                        
+				//tracking mouse position.
+				Vector3 currentScreenSpace = getCorrectMousePosition ();
+				// Debug.Log(mouseX+":x");
+				// Debug.Log(mouseY + "Y");
+				//converting screen position to world position with offset changes.
+				Vector3 currentPosition = Camera.main.ScreenToWorldPoint (currentScreenSpace) + offsetValue;
 
-            //It will update target gameobject's current postion.
-            //Debug.Log(currentPosition.y+":YPosition");
-            if (currentPosition.y < level )//&& gameObject.tag != "RiverWheel")
-            {
-                currentPosition.y = level;
-            }
-            getTarget.transform.position = currentPosition;
-        }
+				//It will update target gameobject's current postion.
+				//Debug.Log(currentPosition.y+":YPosition");
+				if (currentPosition.y < level) {//&& gameObject.tag != "RiverWheel")
+					currentPosition.y = level;
+				}
+				getTarget.transform.position = currentPosition;
+			}
         
-    }
+		}
+	}
 
 
 
@@ -130,6 +126,8 @@ public class DragDropScript : MonoBehaviour
         if(checkEnvironment())
         {
 			SmokeController.sharedInstance.StopSmoke ();
+			GameController.sharedInstance.winGame ();
+
 
             if (gameObject.tag == "Fan" && !riverCollisionFlag && grassCollisionFlag)
             {
@@ -149,7 +147,6 @@ public class DragDropScript : MonoBehaviour
             gameObject.transform.position = startPosition;
 
         }
-        
 
     }
 

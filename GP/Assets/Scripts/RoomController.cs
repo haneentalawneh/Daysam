@@ -36,7 +36,7 @@ public class RoomController : MonoBehaviour
 
 	void Update ()
 	{
-		if (isUserInteractionEnabled) {
+		if (isUserInteractionEnabled && !GameController.sharedInstance.gameIsStopped) {
 			
 			if (Input.GetMouseButtonDown (0)) {
 
