@@ -9,6 +9,7 @@ TagManager:
   - Grass
   - River
   - RiverWheel
+  - RiverSide
   layers:
   - Default
   - TransparentFX

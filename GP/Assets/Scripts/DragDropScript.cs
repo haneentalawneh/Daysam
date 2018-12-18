@@ -9,36 +9,34 @@ public class DragDropScript : MonoBehaviour
     //Initialize Variables
     GameObject getTarget;
     public Image Icon;
+    //Dragging settings
     bool isMouseDragging;
     Vector3 offsetValue;
+    Vector3 startPosition;
     Vector3 positionOfScreen;
+    //Flag to check if this place is suitable place to tool
     bool isSuitablePlaceToDrag = false;
-    bool allowToolToRotate = false;
-    float level = 0;
-    //GameObject River;
-    float riverLevelRatio = 37/313f;
-    float grassLevelRatio = 50 / 313f;
-    //
+    //Forbiden area boundaries
+    float forbidenAreaYAxis = 0;
+    float forbidenAreaXAxis;
+    float defaultValueForForbidenAreaXAxis;
+    //Mouse boundaries
     float mouseX;
     float mouseY;
+    //Screen boundaries
     float screenX;
     float screenY;
-    //
+    //Flags to check collisions
     bool grassCollisionFlag = false;
     bool riverCollisionFlag = false;
-    //
-    Vector3 startPosition;
+    bool riverSideCollisionFlag = false;
+
     // Use this for initialization
     void Start()
     {
         startPosition = gameObject.transform.position;
-       /* River = GameObject.FindWithTag("River");
-        if (River != null)
-        {
-            Debug.Log(River.transform.position.x + ":" + River.transform.position.y + ":" + River.transform.position.z);            
-        }
-        Debug.Log(Screen.width+"W");
-        Debug.Log(Screen.height+":H");*/
+        defaultValueForForbidenAreaXAxis = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).x;
+        forbidenAreaXAxis = defaultValueForForbidenAreaXAxis;
     }
 
     void Update()
@@ -48,8 +46,9 @@ public class DragDropScript : MonoBehaviour
 			if (Input.GetMouseButtonDown (0)) {            
 				RaycastHit hitInfo;
 				getTarget = ReturnClickedObject (out hitInfo);
-				if (getTarget != null) {//if this object is toolObject
-					StopToolRotation ();//change toolRotationStatus
+				if (getTarget != null) {
+                    //if this object is toolObject
+                    StopToolAnimation();//change toolRotationStatus
 					isMouseDragging = true;
 					//Converting world position to screen position.
 					positionOfScreen = Camera.main.WorldToScreenPoint (getTarget.transform.position);
@@ -61,23 +60,24 @@ public class DragDropScript : MonoBehaviour
 			if (Input.GetMouseButtonUp (0)) {
 				isMouseDragging = false;
 				checkIfSutiableAreaForRotation ();
-				Debug.Log (gameObject.transform.position.y + ":YPosition");
 			}
         
 			//Is mouse Moving
 			if (isMouseDragging) {                        
 				//tracking mouse position.
 				Vector3 currentScreenSpace = getCorrectMousePosition ();
-				// Debug.Log(mouseX+":x");
-				// Debug.Log(mouseY + "Y");
 				//converting screen position to world position with offset changes.
 				Vector3 currentPosition = Camera.main.ScreenToWorldPoint (currentScreenSpace) + offsetValue;
-
 				//It will update target gameobject's current postion.
-				//Debug.Log(currentPosition.y+":YPosition");
-				if (currentPosition.y < level) {//&& gameObject.tag != "RiverWheel")
-					currentPosition.y = level;
+                if (currentPosition.y < forbidenAreaYAxis)
+				{
+                    currentPosition.y = forbidenAreaYAxis;
 				}
+                if (riverSideCollisionFlag && currentPosition.x > forbidenAreaXAxis)
+                {
+                    //Debug.Log("TesingReiverSide" + currentPosition.x + "::" + forbidenAreaXAxis);
+                    currentPosition.x = forbidenAreaXAxis;                    
+                }
 				getTarget.transform.position = currentPosition;
 			}
         
@@ -85,7 +85,7 @@ public class DragDropScript : MonoBehaviour
 	}
 
 
-
+    //limit mouse position 
     Vector3 getCorrectMousePosition()
     {
         mouseX = Input.mousePosition.x;
@@ -99,8 +99,8 @@ public class DragDropScript : MonoBehaviour
             mouseX = screenX;
         else
             mouseX = Input.mousePosition.x;
-        if (mouseY < Screen.height * riverLevelRatio)
-            mouseY = Screen.height * riverLevelRatio;
+        if (mouseY < Screen.height * Constants.riverLevelRatio)
+            mouseY = Screen.height * Constants.riverLevelRatio;
         else if (Input.mousePosition.y > screenY)
             mouseY = screenY;
         else
@@ -109,7 +109,8 @@ public class DragDropScript : MonoBehaviour
        return new Vector3(mouseX, mouseY, positionOfScreen.z);
     }
 
-    void StopToolRotation()
+    //stop Tool Animation
+    void StopToolAnimation()
     {
         if (gameObject.tag == "Fan")
         {
@@ -124,32 +125,49 @@ public class DragDropScript : MonoBehaviour
     void checkIfSutiableAreaForRotation()
     {
         if(checkEnvironment())
-        {
-			SmokeController.sharedInstance.StopSmoke ();
-			GameController.sharedInstance.winGame ();
+        {			
 
-
-            if (gameObject.tag == "Fan" && !riverCollisionFlag && grassCollisionFlag)
+            if (!riverCollisionFlag && grassCollisionFlag)
             {
-                Constants.FanRotationStatus = true;
+                if (gameObject.tag == "Fan")
+                {
+                    runWinSetting();
+                    Constants.FanRotationStatus = true;
+                }
+                else if (gameObject.tag == "SunCell")
+                {
+                    runWinSetting();
+                }
             }
             else if (gameObject.tag == "RiverWheel" && riverCollisionFlag && grassCollisionFlag)
             {
+                runWinSetting();
                 Constants.RiverWheelRotationStatus = true;
             }
         }
         else
-        {            
-            this.gameObject.SetActive(false);
-            this.Icon.enabled = true;
-            CoinsController.sharedInstance.showCoins(gameObject.transform.position);
-            CoinsController.sharedInstance.ChangeCountText(true, Constants.Tool_Price);
-            gameObject.transform.position = startPosition;
-
+        {
+            returnToolToToolBox();
         }
 
     }
 
+    //stop smoke and run win animation
+    void runWinSetting()
+    {
+        SmokeController.sharedInstance.StopSmoke();
+        GameController.sharedInstance.winGame();
+    }
+
+    //kick the tool back to ToolBox
+    void returnToolToToolBox()
+    {
+        this.gameObject.SetActive(false);
+        this.Icon.enabled = true;
+        CoinsController.sharedInstance.showCoins(gameObject.transform.position);
+        CoinsController.sharedInstance.ChangeCountText(true, Constants.Tool_Price);
+        gameObject.transform.position = startPosition;
+    }
 
     //Method to Return Clicked Object
     GameObject ReturnClickedObject(out RaycastHit hit)
@@ -168,6 +186,7 @@ public class DragDropScript : MonoBehaviour
         return target;
     }
 
+    //check if this tool is suitable with current env.
     bool checkEnvironment()
     {
         string tag = gameObject.tag;
@@ -199,67 +218,52 @@ public class DragDropScript : MonoBehaviour
         }
     }
 
+    //this method will call if there a collision with this tool
     private void OnTriggerEnter(Collider col)
     {
-        //Debug.Log("Enterede");
-        //
-
-        //Debug.Log(Input.mousePosition.y);
+        
         if (col.gameObject.tag == "Grass")
-        {
-            //if (gameObject.tag == "Fan")
-            {
-                //centre = centerObject.GetComponent<Renderer>().bounds.center;
-                //Debug.Log(Input.mousePosition.y);
-                Debug.Log(col.transform.position.y);
-                Debug.Log(gameObject.transform.position.y);
-                level = gameObject.transform.position.y-3;//Camera.main.WorldToScreenPoint(new Vector3(0, col.transform.position.y,0)).y;
-                Debug.Log(level);
-                grassCollisionFlag = true;
-                Debug.Log("Enter Grass");
-            }
+        {           
+            forbidenAreaYAxis = gameObject.transform.position.y - 5;
+            grassCollisionFlag = true;
+            //Debug.Log("Enter Grass");
         }
         else if (col.gameObject.tag == "River")
-        {
-            //if (gameObject.tag == "RiverWheel")
-            {
-                //Debug.Log(Screen.width + "W");
-                //Debug.Log(Screen.height + ":H");
-                //centre = centerObject.GetComponent<Renderer>().bounds.center;
-                riverCollisionFlag = true;
-                Debug.Log("Enter River");
-            }
+        {            
+            riverCollisionFlag = true;
+            //Debug.Log("Enter River");
+        }
+        else if (col.gameObject.tag == "RiverSide")
+        {            
+            forbidenAreaXAxis = gameObject.transform.position.x;
+            riverSideCollisionFlag = true;
+            //Debug.Log("RiverSide" );
         }
     }
 
+    //this method will call if this tool has left a collision area
     private void OnTriggerExit(Collider col)
     {
         
-        //
-
-        //Debug.Log(Input.mousePosition.y);
         if (col.gameObject.tag == "Grass")
         {
-            //if (gameObject.tag == "Fan")
-            {
-                //centre = centerObject.GetComponent<Renderer>().bounds.center;
-                //Debug.Log(Input.mousePosition.y);
-                //Debug.Log(col.transform.position.y);
-                grassCollisionFlag = false;
-                Debug.Log("Exit Grass");
-            }
+            grassCollisionFlag = false;
+            forbidenAreaYAxis = 0;
+            //Debug.Log("Exit Grass");
         }
         else if (col.gameObject.tag == "River")
         {
-            //if (gameObject.tag == "RiverWheel")
-            {
-                //centre = centerObject.GetComponent<Renderer>().bounds.center;
-                riverCollisionFlag = false;
-                Debug.Log("Exit River");
-            }
+            riverCollisionFlag = false;            
+            forbidenAreaYAxis = 0;
+            //Debug.Log("Exit River");
         }
-        level = 0;
-    }
-    
+        else if (col.gameObject.tag == "RiverSide")
+        {
+            forbidenAreaXAxis = defaultValueForForbidenAreaXAxis;
+            riverSideCollisionFlag = false;  
+            //Debug.Log("ExitRiverSide");
+        }
+        //forbidenAreaYAxis = 0;
+    }    
 
 }

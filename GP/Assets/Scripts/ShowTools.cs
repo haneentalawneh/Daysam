@@ -20,6 +20,7 @@ public class ShowTools : MonoBehaviour {
 		
 	}
 
+    //Buy a tool if you have enough money
     void BuyToolIFYouCan()
     {
         if(CoinsController.sharedInstance.getCoinsCount()>=Constants.Tool_Price)
@@ -27,8 +28,7 @@ public class ShowTools : MonoBehaviour {
             Icon.enabled = false;
             toolObject.SetActive(true);
             CoinsController.sharedInstance.ChangeCountText(false, Constants.Tool_Price);
-        }
-        
+        }        
            
     }
 }
