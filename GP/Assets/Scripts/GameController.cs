@@ -8,10 +8,14 @@ public class GameController : MonoBehaviour
 	public GameObject house;
 	public static GameController sharedInstance = null;
 	GameObject currentlySelectedRoom;
+	public GameObject confetti;
+	AudioSource src;
+	public GameObject RestartCanvas;
+	public bool gameIsStopped = false;
 
 	void Start ()
 	{
-
+		src = gameObject.GetComponent<AudioSource> ();
 		sharedInstance = this; 
 	}
 
@@ -76,5 +80,19 @@ public class GameController : MonoBehaviour
 				controller.generateRoomLightState (false);
 			}
 		}
+	}
+
+	public void winGame ()
+	{
+		confetti.SetActive (true);
+		EnvironmentController.sharedInstance.stopEnvironmentSound ();
+		src.Play ();
+		gameIsStopped = true;
+		RestartCanvas.SetActive (true);
+	}
+
+	public void RestartGame ()
+	{
+		GameManager.sharedInstance.InitGame ();
 	}
 }

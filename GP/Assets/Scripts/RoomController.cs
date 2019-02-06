@@ -36,7 +36,7 @@ public class RoomController : MonoBehaviour
 
 	void Update ()
 	{
-		if (isUserInteractionEnabled) {
+		if (isUserInteractionEnabled && !GameController.sharedInstance.gameIsStopped) {
 			
 			if (Input.GetMouseButtonDown (0)) {
 
@@ -86,7 +86,7 @@ public class RoomController : MonoBehaviour
 					CoinsController.sharedInstance.showCoins (roomLight.transform.position);
 				}
 
-				CoinsController.sharedInstance.ChangeCountText (!pointLightGameObject.activeSelf);
+                CoinsController.sharedInstance.ChangeCountText(!pointLightGameObject.activeSelf, Constants.TurnOff_Light_Price);
 			}
 		}
 	}

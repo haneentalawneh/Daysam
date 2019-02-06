@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
 	}
 
-	void InitGame ()
+	public void InitGame ()
 	{
 		
 		litRoomsNumber = Random.Range (1, 7);
@@ -64,10 +64,4 @@ public class GameManager : MonoBehaviour
 			
 		}
 	}
-
-	public IEnumerator executeAfter (float period)
-	{
-		yield return new WaitForSeconds (period);
-	}
-
 }
