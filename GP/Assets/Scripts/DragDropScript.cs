@@ -164,9 +164,9 @@ public class DragDropScript : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         this.Icon.enabled = true;
-        CoinsController.sharedInstance.showCoins(gameObject.transform.position);
         CoinsController.sharedInstance.ChangeCountText(true, Constants.Tool_Price);
         gameObject.transform.position = startPosition;
+		AudioManager.sharedInstance.PlaySound (Enums.Sound.WrongTool);
     }
 
     //Method to Return Clicked Object
