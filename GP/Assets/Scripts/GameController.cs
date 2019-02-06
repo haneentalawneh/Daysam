@@ -86,7 +86,7 @@ public class GameController : MonoBehaviour
 	{
 		confetti.SetActive (true);
 		EnvironmentController.sharedInstance.stopEnvironmentSound ();
-		src.Play ();
+		AudioManager.sharedInstance.PlaySound (Enums.Sound.WellDone);
 		gameIsStopped = true;
 		RestartCanvas.SetActive (true);
 	}

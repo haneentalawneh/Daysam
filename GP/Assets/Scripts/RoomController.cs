@@ -83,10 +83,18 @@ public class RoomController : MonoBehaviour
 
 				// if the user turned off the light show the coins 
 				if (!pointLightGameObject.activeSelf) {
+					
+					GameManager.sharedInstance.litRoomsNumber--;
+
 					CoinsController.sharedInstance.showCoins (roomLight.transform.position);
+
+					if (GameManager.sharedInstance.litRoomsNumber == 0) {
+						
+						AudioManager.sharedInstance.PlaySound (Enums.Sound.LightsOff);
+					}
 				}
 
-                CoinsController.sharedInstance.ChangeCountText(!pointLightGameObject.activeSelf, Constants.TurnOff_Light_Price);
+				CoinsController.sharedInstance.ChangeCountText (!pointLightGameObject.activeSelf, Constants.TurnOff_Light_Price);
 			}
 		}
 	}
