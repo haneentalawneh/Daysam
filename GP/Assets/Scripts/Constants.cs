@@ -42,4 +42,6 @@ public class Constants : MonoBehaviour
     public static bool FanRotationStatus = false;
 
     public static float riverLevelRatio = 0.119f;//(37 / 313f)
+
+	public static float gameDuration = 3.0f;
 }

@@ -12,17 +12,39 @@ public class GameController : MonoBehaviour
 	AudioSource src;
 	public GameObject RestartCanvas;
 	public bool gameIsStopped = false;
+	float currCountdownValue;
 
 	void Start ()
 	{
 		src = gameObject.GetComponent<AudioSource> ();
 		sharedInstance = this; 
+		AudioManager.sharedInstance.PlaySound (Enums.Sound.Introduction1);
+		StartCoroutine (StartCountdown ());
 	}
 
-	//Update is called every frame.
-	void Update ()
+	public IEnumerator StartCountdown (float countdownValue = 180)
 	{
+		currCountdownValue = countdownValue;
 
+		while (currCountdownValue > 0) {
+			
+			if (!gameIsStopped) {
+				
+				Debug.Log ("Countdown: " + currCountdownValue);
+
+				if (currCountdownValue == 120 || currCountdownValue == 60) {
+					BearsController.sharedInstance.changeBearState (currCountdownValue);
+				}
+			}
+
+			yield return new WaitForSeconds (1.0f);
+			currCountdownValue--;
+		}
+
+		if (!gameIsStopped) {
+			
+			GameOver ();
+		}
 	}
 
 	public void ShowRooms ()
@@ -31,6 +53,7 @@ public class GameController : MonoBehaviour
 		house.SetActive (false);
 
 		InitRoomsLightState ();
+		AudioManager.sharedInstance.PlaySound (Enums.Sound.TurnOffTheLights);
 	}
 
 	public void RoomIsZoomed (GameObject room)
@@ -91,8 +114,16 @@ public class GameController : MonoBehaviour
 		RestartCanvas.SetActive (true);
 	}
 
+	public void GameOver ()
+	{
+		
+		AudioManager.sharedInstance.PlaySound (Enums.Sound.TimeOver);
+		gameIsStopped = true;
+		RestartCanvas.SetActive (true);
+	}
+
 	public void RestartGame ()
 	{
-		GameManager.sharedInstance.InitGame ();
+		GameManager.sharedInstance.InitGame (true);
 	}
 }

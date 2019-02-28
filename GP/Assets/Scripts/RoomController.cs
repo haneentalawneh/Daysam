@@ -90,8 +90,11 @@ public class RoomController : MonoBehaviour
 
 					if (GameManager.sharedInstance.litRoomsNumber == 0) {
 						
-						AudioManager.sharedInstance.PlaySound (Enums.Sound.LightsOff);
+						AudioManager.sharedInstance.playToolInfo();
 					}
+				} else {
+					
+					GameManager.sharedInstance.litRoomsNumber++;
 				}
 
 				CoinsController.sharedInstance.ChangeCountText (!pointLightGameObject.activeSelf, Constants.TurnOff_Light_Price);

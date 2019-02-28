@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 	public static GameManager sharedInstance = null;
 	public Enums.EnvironmentMood currentMood;
 	public int litRoomsNumber;
+	public AudioSource src;
 
 	//Awake is always called before any Start functions
 	void Awake ()
@@ -29,21 +30,25 @@ public class GameManager : MonoBehaviour
 
 		//Sets this to not be destroyed when reloading scene
 		DontDestroyOnLoad (gameObject);
-		InitGame ();
-
+		InitGame (false);
+		StartCoroutine (startGame ());
 	}
 
-	public void InitGame ()
+	public void InitGame (bool isRestarted)
 	{
 		
 		litRoomsNumber = Random.Range (1, 7);
 		SetGameMood ();
-		SceneManager.LoadScene ("Main");
+
+		if (isRestarted) {
+			
+			SceneManager.LoadScene ("Main");
+		}
 	}
 
 	void SetGameMood ()
 	{
-		int mood = Random.Range (0, 2999)%3;
+		int mood = Random.Range (0, 2999) % 3;
 
 		switch (mood) {
 
@@ -64,4 +69,11 @@ public class GameManager : MonoBehaviour
 			
 		}
 	}
+
+	public IEnumerator startGame (){
+		
+		yield return new WaitForSeconds (src.clip.length);
+		SceneManager.LoadScene ("Main");
+	}
+
 }

@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 	AudioSource src;
 	public static AudioManager sharedInstance;
 
-	void Start ()
+	void Awake ()
 	{
 		sharedInstance = this;
 		src = gameObject.GetComponent<AudioSource> ();
@@ -16,7 +16,25 @@ public class AudioManager : MonoBehaviour
 
 	public void PlaySound (Enums.Sound sound)
 	{
-		src.clip = clips[(int)sound];
-		src.Play ();
+		if (!GameController.sharedInstance.gameIsStopped) {
+			
+			src.clip = clips [(int)sound];
+			src.Play ();
+		}
+	}
+
+	public void playToolInfo ()
+	{
+		
+		StartCoroutine (playToolsInfo ());
+	}
+
+	public IEnumerator playToolsInfo ()
+	{
+		PlaySound (Enums.Sound.LightsOff);
+		yield return new WaitForSeconds (src.clip.length);
+		PlaySound (Enums.Sound.Tools);
+		yield return new WaitForSeconds (src.clip.length);
+		PlaySound (Enums.Sound.Environment);
 	}
 }
