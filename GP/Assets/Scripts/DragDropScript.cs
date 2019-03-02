@@ -226,18 +226,18 @@ public class DragDropScript : MonoBehaviour
         {           
             forbidenAreaYAxis = gameObject.transform.position.y - 5;
             grassCollisionFlag = true;
-            //Debug.Log("Enter Grass");
+            Debug.Log("Enter Grass");
         }
         else if (col.gameObject.tag == "River")
         {            
             riverCollisionFlag = true;
-            //Debug.Log("Enter River");
+            Debug.Log("Enter River");
         }
         else if (col.gameObject.tag == "RiverSide")
         {            
             forbidenAreaXAxis = gameObject.transform.position.x;
             riverSideCollisionFlag = true;
-            //Debug.Log("RiverSide" );
+            Debug.Log("RiverSide");
         }
     }
 
@@ -249,19 +249,19 @@ public class DragDropScript : MonoBehaviour
         {
             grassCollisionFlag = false;
             forbidenAreaYAxis = 0;
-            //Debug.Log("Exit Grass");
+            Debug.Log("Exit Grass");
         }
         else if (col.gameObject.tag == "River")
         {
             riverCollisionFlag = false;            
             forbidenAreaYAxis = 0;
-            //Debug.Log("Exit River");
+            Debug.Log("Exit River");
         }
         else if (col.gameObject.tag == "RiverSide")
         {
             forbidenAreaXAxis = defaultValueForForbidenAreaXAxis;
             riverSideCollisionFlag = false;  
-            //Debug.Log("ExitRiverSide");
+            Debug.Log("ExitRiverSide");
         }
         //forbidenAreaYAxis = 0;
     }    
