@@ -178,9 +178,8 @@ public class DragDropScript : MonoBehaviour
         {
             if (hit.transform)
             {
-
-                if (hit.transform.gameObject.transform.position == gameObject.transform.position )//&& checkEnvironment(hit.collider.tag))
-                   target = hit.collider.gameObject;
+                if(hit.transform.gameObject.tag == gameObject.tag)
+                    target = gameObject;
             }
         }
         return target;
