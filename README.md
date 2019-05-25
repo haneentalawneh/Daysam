@@ -17,3 +17,4 @@ if the user turns off all the rooms he’ll earn 6 coins
 the player has to buy the right tool in order to turn off the engine and win the game
 the tool is considered to be the right one, if it can be fully utilized in the current environment mood, i.e. the right tool for the windy environment is the wind turbine.
 
+https://github.com/haneentalawneh/Daysam/blob/master/bear3.png
